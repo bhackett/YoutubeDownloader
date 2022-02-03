@@ -1,4 +1,3 @@
-import os
 from threading import *
 from tkinter import *
 from tkinter.filedialog import *
@@ -14,6 +13,7 @@ if q == "shutdown":
     os.system("shutdown -s")
 """
 
+
 # function progress to keep check of progress of function.
 def progress(stream=None, chunk=None, remaining=None):
     file_downloaded = (file_size - remaining)
@@ -23,7 +23,7 @@ def progress(stream=None, chunk=None, remaining=None):
 
 # function start download to start the download of files
 def startDownload():
-    global file_size, urlField, label, desc
+    global file_size
     try:
         URL = urlField.get()
         dBtn.config(text='Please wait...')
@@ -89,4 +89,3 @@ author = Label(main, text="@G.S.")
 author.config(font=("Courier", 44))
 author.pack(side=BOTTOM)
 main.mainloop()
-
